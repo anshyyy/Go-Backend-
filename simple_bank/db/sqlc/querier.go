@@ -9,7 +9,11 @@ import (
 )
 
 type Querier interface {
-	CreateAuthor(ctx context.Context, arg CreateAuthorParams) (Account, error)
+	CreateAccount(ctx context.Context, arg CreateAccountParams) (Account, error)
+	DeleteAccount(ctx context.Context, id int64) error
+	GetAccount(ctx context.Context, id int64) (Account, error)
+	ListAccount(ctx context.Context, arg ListAccountParams) ([]Account, error)
+	UpdateAccount(ctx context.Context, arg UpdateAccountParams) (Account, error)
 }
 
 var _ Querier = (*Queries)(nil)
