@@ -5,7 +5,6 @@ import (
 	"database/sql"
 	"testing"
 	"time"
-
 	"github.com/anshyyy/Go-Backend-/tree/master/simple_bank/util"
 	"github.com/stretchr/testify/require"
 )
